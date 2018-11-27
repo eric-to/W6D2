@@ -10,23 +10,29 @@ class View {
       let $cell = $(e.currentTarget);
       this.makeMove($cell);
       if (this.game.isOver()) {
-        alert(`${this.game.currentPlayer} has won!`);
+        let winner = this.game.winner();
+        winner = winner === 'x' ? 'o' : 'x';
+        console.log(winner);
+        const $playerWin = $('<h3>');
+        if (winner) {
+          $playerWin.text(`${winner} has won!`);
+        } else {
+          $playerWin.text("It\'s a tie!");
+        }
+        this.el.append($playerWin).css("font-size", "26px");
       }
     });
   }
 
   makeMove($square) {
     try {
-      console.log($square.data());
       this.game.playMove($square.data().pos);
     }
     catch(err) {
       alert('Your move was invalid!');
     }
     let currPlayer = this.game.currentPlayer;
-    console.log(typeof currPlayer);
     if (currPlayer === "o") {
-      console.log(currPlayer);
       $square.text(currPlayer).css('color', 'red');
     } else {
       $square.text(currPlayer).css('color', 'blue');
