@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    background-color: #f8f8f8;
+
+}
+
+h1 {
+    margin: 0;
+    padding: 5vmin;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: Arial, sans-serif;
+    font-size: 7.5vmin;
+    font-weight: lighter;
+    text-align: center;
+    background: linear-gradient(to right, rgba(150, 111, 51, 0.4), rgba(150, 111, 51, 0.2)),
+    repeating-linear-gradient(to right, #eec487, #eec487 3vmin, #f3cf9a 3vmin, #f3cf9a 6vmin, #f8d8a2 6vmin, #f8d8a2 9vmin, #f1ca88 9vmin, #f1ca88 12vmin, #f4d09e 12vmin, #f4d09e 15vmin, #faddb0 15vmin, #faddb0 18vmin, #eec88a 18vmin, #eec88a 21vmin);
+}
+.towers {
+  display: flex;
+  /* grid-template-columns: auto auto auto; */
+  justify-content: center;
+  flex-direction:  row;
+}
+/* .towers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+} */
+
+ul {  
+  width: 50%;
+  padding: 10px;
+  width: 100%;
+  margin-left: 5px;
+  /* transform:  translateX(-50%) translateY(-50%) rotate(-90deg); */
+  
+}
+
+li {
+  background-color: blue;
+  margin: 5px;
+  text-align: center;
+}
+
+.one {
+  background-color: red;
+  width: 25%;
+}
+
+li:nth-child(odd) {
+  margin-left: 50px;
+}
+
+.two {
+  background-color: blue;
+  width: 45%;
+}
+
+.three {
+  background-color: green;
+  width: 65%;
+}
